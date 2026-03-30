@@ -19,7 +19,7 @@ This project is a web-based online store designed for Jacksonville University. T
 
 ### Live Website
 _The website is hosted using GitHub Pages_
-
+https://heartofasar.github.io/CS380TermProject.github.io/
 
 ## Team Members
 - Jai-Hari Washington
@@ -29,3 +29,4 @@ _The website is hosted using GitHub Pages_
 
 ## License
 This project is for educational purposes only
+
