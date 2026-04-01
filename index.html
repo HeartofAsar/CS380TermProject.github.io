@@ -8,24 +8,48 @@
 
     <body>
         <header>
+        <!-- Navigation bar -->
             <img class="logo-img" src="images/phinstore_Nameplate_white.png" alt="PhinStore logo">
-            <nav>
-                <a href="">Store</a>
-                <a href="">About project</a>
-            </nav>
-        </header>
-         <h1>Fundamentals of Web Development</h1>
-         <p><em>By Randy Connolly and Ricardo Hoar</em></p>
-        <a href="project1/cover-large.png"> <img src="project1/cover-small.png" alt="This is an image of the cover of Fundamentals of Web Programming"></a>
-        <p>This textbook covers a broad range of topics required for modern web Development</p>
-        <p><a href="https://www.funwebdev.com"> Learn more</a></p>
-        <h2>First Chapters</h2>
-        <ol type="1">
-            <li>Introduction to Web Development</li>
-            <li>How the Web Works</li>
-            <li>Introduction to HTML</li>
-            <li>Introduction to CSS</li>
-        </ol>
+        <div class="Pages-Wrapper">
 
+            <nav class="Pages">
+             <ul class="Pages-nav">
+
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="shop.html">Shop</a></li>
+                 <li><a href="stationery.html">Stationery</a></li>
+                 <li><a href="merch.html">Merchandise</a></li>
+                 <li><a href="tech.html">Tech</a></li>
+                 <li><a href="cart.html">Cart</a></li>
+                </ul> 
+            </nav>  
+        </div>
+        </header>
+    <main>
+        <!-- Content -->
+         <section class="Hero">
+            <h1>Welcome to Phin Store</h1>
+            <p>Shop merch, supplies, and tech essentials</p>
+            <button><a href="shop.html">Shop Now!</a></button>
+         </section>
+
+         <section class="categories">
+             <div>Stationery</div>
+            <div>Merchandise</div>
+            <div>Tech</div>
+         </section>
+
+         <section class="featured">
+            <div class="product-card">Item 1</div>
+            <div class="product-card">Item 2</div>
+            <div class="product-card">Item 3</div>
+         </section>
+
+    </main>
+
+    <footer>
+        <!-- Footer -->
+        <em>@ 2026 PhinStore</em>
+    </footer>
     </body>
 </html>
