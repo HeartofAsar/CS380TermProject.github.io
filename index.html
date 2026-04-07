@@ -4,25 +4,19 @@
          <title>PhinStore | JU</title>
          <meta charset="utf-8">
          <link rel="stylesheet" href="css/style.css">
+         <script src="js/index.js"></script>
     </head>
 
     <body>
         <header>
         <!-- Navigation bar -->
             <img class="logo-img" src="images/phinstore_Nameplate_white.png" alt="PhinStore logo">
-        <div class="Pages-Wrapper">
-
-            <nav class="Pages">
-             <ul class="Pages-nav">
-
-                 <li><a href="index.html">Home</a></li>
-                 <li><a href="shop.html">Shop</a></li>
-                 <li><a href="stationery.html">Stationery</a></li>
-                 <li><a href="merch.html">Merchandise</a></li>
-                 <li><a href="tech.html">Tech</a></li>
-                 <li><a href="cart.html">Cart</a></li>
-                </ul> 
-            </nav>  
+        <div class="HomeNav" id="TopNav">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="stationery.html">Stationery</a>
+            <a href="tech.html">Tech</a>
+            <a href="cart.html">Cart</a>
         </div>
         </header>
     <main>
@@ -33,6 +27,50 @@
             <button><a href="shop.html">Shop Now!</a></button>
          </section>
 
+         <!-- Carousel  -->
+         <div class="Carousel-Container">
+        
+            <!--Full width images with captions-->
+            <div class="Carousel-slides">
+                <img src="images/Caution.png">
+                <div class="Carousel-text">Caption text 1</div>
+            </div>
+
+            <div class="Carousel-slides">
+                <img src="images/Caution.png">
+                <div class="Carousel-text">Caption text 2</div>
+            </div>
+
+            <div class="Carousel-slides">
+                <img src="images/Caution.png">
+                <div class="Carousel-text">Caption text 3</div>
+            </div>
+
+            <div class="Carousel-slides">
+                <img src="images/Caution.png">
+                <div class="Carousel-text">Caption text 4</div>
+            </div>
+
+            <div class="Carousel-slides">
+                <img src="images/Caution.png">
+                <div class="Carousel-text">Caption text 5</div>
+            </div>
+
+            <!-- Next & Previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- Dots/Circles -->
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentslide(1)"></span>
+                <span class="dot" onclick="currentslide(2)"></span>
+                <span class="dot" onclick="currentslide(3)"></span>
+                <span class="dot" onclick="currentslide(4)"></span>
+                <span class="dot" onclick="currentslide(5)"></span>
+            </div>
+
          <section class="categories">
              <div>Stationery</div>
             <div>Merchandise</div>
@@ -40,10 +78,42 @@
          </section>
 
          <section class="featured">
-            <div class="product-card">Item 1</div>
-            <div class="product-card">Item 2</div>
-            <div class="product-card">Item 3</div>
-         </section>
+                <div class="product-card">
+                    <img src="images/Five Star Notebook1.jpg" style="width: 100%" alt="Five Star: 5-subject Ruled Notebook">
+                    <h1>Notebooks</h1>
+                    <p class="price">$27.79</p>
+                    <p><button type="button">Add to Cart</button></p>
+                </div>
+                <div class="product-card">
+                    <img src="images/Macbook Neo.jpg" style="width: 100%" alt="Apple: Macbook Neo">
+                    <h1>Computer & Hardware</h1>
+                    <p class="price">$599.99</p>
+                    <p><button type="button">Add to Cart</button></p>
+                </div>
+
+            
+                <div class="product-card">
+                    <img src="images/Ti-84 Plus CE Graphing Calculator.jpg" style="width: 100%;" alt="Texas Instrumental: TI-84 Plus CE Grpahing Calculator">
+                    <h1>Calculators</h1>
+                    <p class="price">$195.56 </p>
+                    <p><button type="button">Add to Cart</button></p>
+                </div>
+                <div class="product-card">
+                    <img src="images/Paper Mate InkJoy Gel Pens.jpg" style="width: 100%" alt="Paper Mate InkJoy Gel Pens">
+                    <h1>Pens & Pencils</h1>
+                    <p class="price">$21.99</p>
+                    <p><button type="button">Add to Cart</button></p>
+                </div>
+
+
+            
+                <div class="product-card">
+                    <img src="images/3-ring Binder.jpg" style="width: 100%" alt="3-ring Binder 200 Sheet Capacity">
+                    <p class="price">$16.99 </p>
+                    <h1>Binders & Folders</h1>
+                    <p><button type="button">Add to Cart</button></p>
+                </div>
+            </section>
 
     </main>
 
