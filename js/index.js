@@ -1,44 +1,22 @@
-let carouselIndex = 0;
-showslides(carouselIndex);
+let slideIndex = 0;
+showSlides();
 
-//Next/Prev controls
-function plusSlides(n)
+function showSlides()
 {
-    showslides(carouselIndex += n);
-}
+    let i;
+    let slides = document.getElementsByClassName("Carousel-slides");
 
-//Image controls
-function currentslide(n)
-{
-    showslides(carouselIndex = n);
-}
-
-function showslides(n)
-{
-    let slides = document.getElementsByClassName("carousel-slides");
-    let dots = document.getElementsByClassName("dot");
-    
-    if(n > slides.length)
-    {
-        carouselIndex = 1;
-    }
-
-    if(n < 1)
-    {
-        carouselIndex = slides.length;
-    }
-
-    for(let i = 0; i < slides.length; i++)
+    for(i = 0; i < slides.length; i++)
     {
         slides[i].style.display = "none";
     }
 
-    for(let j = 0; j < dots.length; i++)
+    slideIndex++;
+    if(slideIndex > slides.length)
     {
-        dots[i].className = dots[i].className.replace(" active", "" );
+        slideIndex = 1;
+
     }
-
-    slides[carouselIndex-1].style.display = "block";
-    dots[carouselIndex-1].className += " active";
-
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); //Change image every 2 seconds
 }
