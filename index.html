@@ -4,13 +4,14 @@
          <title>PhinStore | JU</title>
          <meta charset="utf-8">
          <link rel="stylesheet" href="css/style.css">
-         <script src="js/index.js"></script>
+         <script src="js/index.js" type="text/JavaScript"></script>
+         <script src="js/items.js" type="text/JavaScript"></script>
     </head>
 
     <body>
         <header>
         <!-- Navigation bar -->
-            <img class="logo-img" src="images/phinstore_Nameplate_white.png" alt="PhinStore logo">
+            <a href="index.html"><img class="logo-img" src="images/phinstore_Nameplate_white.png" alt="PhinStore logo"></a>
         <div class="HomeNav" id="TopNav">
             <a href="index.html" class="active">Home</a>
             <a href="shop.html">Shop</a>
@@ -77,43 +78,46 @@
             <div>Tech</div>
          </section>
 
+
          <section class="featured">
-                <div class="product-card">
-                    <img src="images/Five Star Notebook1.jpg" style="width: 100%" alt="Five Star: 5-subject Ruled Notebook">
-                    <h1>Notebooks</h1>
-                    <p class="price">$27.79</p>
-                    <p><button type="button">Add to Cart</button></p>
-                </div>
-                <div class="product-card">
-                    <img src="images/Macbook Neo.jpg" style="width: 100%" alt="Apple: Macbook Neo">
-                    <h1>Computer & Hardware</h1>
-                    <p class="price">$599.99</p>
-                    <p><button type="button">Add to Cart</button></p>
-                </div>
-
-            
-                <div class="product-card">
-                    <img src="images/Ti-84 Plus CE Graphing Calculator.jpg" style="width: 100%;" alt="Texas Instrumental: TI-84 Plus CE Grpahing Calculator">
-                    <h1>Calculators</h1>
-                    <p class="price">$195.56 </p>
-                    <p><button type="button">Add to Cart</button></p>
-                </div>
-                <div class="product-card">
-                    <img src="images/Paper Mate InkJoy Gel Pens.jpg" style="width: 100%" alt="Paper Mate InkJoy Gel Pens">
-                    <h1>Pens & Pencils</h1>
-                    <p class="price">$21.99</p>
-                    <p><button type="button">Add to Cart</button></p>
-                </div>
-
-
-            
-                <div class="product-card">
-                    <img src="images/3-ring Binder.jpg" style="width: 100%" alt="3-ring Binder 200 Sheet Capacity">
-                    <p class="price">$16.99 </p>
-                    <h1>Binders & Folders</h1>
-                    <p><button type="button">Add to Cart</button></p>
-                </div>
-            </section>
+                <!-- <script>
+                for (let i = 0; i < itemsHomepage.length; i++)
+                {
+                let itemsLeftText = "";
+                if (itemsHomepage[i].itemsLeft > 50)
+                {
+                    itemsLeftText = `<p class="items-left">${itemsHomepage[i].itemsLeft} left in stock</p>`
+                }
+                else
+                {
+                    itemsLeftText = `<p class="items-left only-left-caution">! ONLY ${itemsHomepage[i].itemsLeft} LEFT !</p>`
+                }
+                document.write(`
+                    <div class="product-card">
+                    <img src="images/${itemsHomepage[i].product.filename}" style="width: 80%" alt="${itemsHomepage[i].product.filename}">
+                    <h1>${itemsHomepage[i].product.title}</h1>
+                    ${itemsLeftText}
+                    <p class="price">$${itemsHomepage[i].product.price}</p>
+                    <p><button type="button">See more</button></p>
+                    </div>
+                `);
+                } -->
+                <script>
+                for (let i = 0; i < itemsHomepage.length; i++)
+                {
+                let itemsLeftText = "";
+                document.write(`
+                    <div class="product-card">
+                    <img src="images/${itemsHomepage[i].product.filename}" style="width: 80%" alt="${itemsHomepage[i].product.filename}">
+                    <h1>${itemsHomepage[i].product.title}</h1>
+                    <p><a href="shop.html">
+                        <button type="button" onclick="../shop.html">See more</button>
+                    </a></p>
+                    </div>
+                `);
+                }
+                </script>
+         </section>
 
     </main>
 
