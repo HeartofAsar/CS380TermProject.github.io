@@ -4,7 +4,9 @@
          <title>PhinStore | JU</title>
          <meta charset="utf-8">
          <link rel="stylesheet" href="css/style.css">
+         <link rel="stylesheet" href="css/shop.css">
          <script src="js/index.js"></script>
+         <script src="js/items.js"></script>
     </head>
 
     <body>
@@ -19,3 +21,73 @@
             <a href="cart.html">Cart</a>
         </div>
         </header>
+        <table class="main-layout">
+            <tr>
+                <!-- left - filters -->
+                <td class="sidebar">
+                    <h2>Filters</h2>
+
+                    <div class="filter-box">
+                        <h4>Category</h4>
+                        <p><input type="checkbox"> Electronics</p>
+                        <p><input type="checkbox"> Books</p>
+                        <p><input type="checkbox"> Clothing</p>
+                    </div>
+
+                    <div class="filter-box">
+                        <h4>Price</h4>
+                        <p><input type="checkbox"> Under $50</p>
+                        <p><input type="checkbox"> $50 - $200</p>
+                        <p><input type="checkbox"> $200+</p>
+                    </div>
+
+                    <div class="filter-box">
+                        <h4>Rating</h4>
+                        <p><input type="checkbox"> ★★★★★</p>
+                        <p><input type="checkbox"> ★★★★+</p>
+                    </div>
+                </td>
+
+                <!-- right - items -->
+                <td class="products-area">
+
+                    <table class="shop-table">
+                        <script>
+                            document.write("<tr>");
+                            for (let i = 0; i < items.length; i++) {
+                                let bestsellerText = "";
+                                if (i > 0 && i % 4 === 0) {
+                                    document.write("</tr><tr>");
+                                }
+                                if (items[i].product.bestseller) {
+                                    bestsellerText = "<div class='card-bestseller'>Best Seller</div>";
+                                }
+                                
+                                document.write(`
+                                    <td>
+                                        <div class="shop-card">
+                                            ${bestsellerText}
+                                            <div class="card-img-box">
+                                                <img src="images/items/${items[i].product.filename}" class="item-img" alt="${items[i].product.title}">
+                                            </div>
+                                            <div class="card-body">
+                                                <h3 class="card-title">${items[i].product.title}</h3>
+                                                <p class="card-price">$${items[i].product.price}</p>
+                                                <p class="card-info">Brand: ${items[i].product.brand}</p>
+                                                <p class="card-info">In stock: ${items[i].product.itemsLeft}</p>
+                                                <p class="card-info">Category: ${items[i].product.category}</p>
+                                                <button class="card-button">Add to cart</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                `);
+                            }
+                            document.write("</tr>");
+                        </script>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

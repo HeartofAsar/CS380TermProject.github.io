@@ -6,14 +6,20 @@ body{
 header{
     background-color: rgb(13, 38, 0);
     display: flex;
+    align-items: center;
 }
+
+.HomeNav{
+    display: flex;
+    margin-left: auto;
+}
+
 /* Style the links inside the navigation bar */
 .HomeNav a{
-    float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 28px 16px;
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
