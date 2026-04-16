@@ -6,6 +6,7 @@
          <link rel="stylesheet" href="css/style.css">
          <link rel="stylesheet" href="css/shop.css">
          <script src="js/items.js"></script>
+         <script src="js/shop.js"></script>
     </head>
 
     <body>
@@ -20,7 +21,7 @@
             <a href="cart.html">Cart</a>
         </div>
         </header>
-        <table class="main-layout">
+        <table class="main-table">
             <tr>
                 <!-- left - filters -->
                 <td class="sidebar">
@@ -54,14 +55,15 @@
                         <script>
                             document.write("<tr>");
                             for (let i = 0; i < items.length; i++) {
+
+
                                 // BESTSELLER SIGN
                                 let bestsellerText = "";
-                                if (i > 0 && i % 4 === 0) {
-                                    document.write("</tr><tr>");
-                                }
                                 if (items[i].product.bestseller) {
                                     bestsellerText = "<div class='card-bestseller'>Best Seller</div>";
                                 }
+
+
                                 // RATING STARS
                                 let ratingText = "";
                                 if (items[i].product.rating == 1) {
@@ -79,13 +81,71 @@
                                 else if (items[i].product.rating == 5) {
                                     ratingText = "<p class='card-rating'>★★★★★</p>";
                                 }
+                                
+
+
+
+
+
+                                let colorsText = "";
+
+                                // taking every color for each item from items.js
+                                // + added length check to make sure to avoid error if item doesn't have colors
+                                if (items[i].product.colors.length > 0) {
+                                    for (let j = 0; j < items[i].product.colors.length; j++)
+                                    {
+
+
+                                        let color = items[i].product.colors[j];
+                                        // adding radio input for each color from items.js
+                                        // auto pick for first color in radio input
+
+                                        // if it is first color make it checked by the default
+                                        if (j === 0)
+                                        {
+                                            colorsText += `
+                                            <label>
+                                                <input type="radio" name="color-${items[i].product.id}" value="${color}" checked
+                                                    onchange="itemColorChange(${i}, '${color}')">
+                                                <!-- ${color} -->
+                                                ${color}
+                                            </label>
+                                        `;
+                                        }
+
+                                        // else, don't make it checked
+                                        else
+                                        {
+                                            colorsText += `
+                                            <label>
+                                                <input type="radio" name="color-${items[i].product.id}" value="${color}"
+                                                    onchange="itemColorChange(${i}, '${color}')">
+                                                <!-- ${color} -->
+                                                ${color}
+                                            </label>
+                                        `;
+                                        }
+                                        //
+                                    }
+                                }
+
+
+                                // if 4 items in a row make a new line
+                                if (i > 0 && i % 4 === 0) {
+                                    document.write("</tr><tr>");
+                                }
+
                                 // CARD CREATINF
                                 document.write(`
                                     <td>
                                         <div class="shop-card">
                                             ${bestsellerText}
                                             <div class="card-img-box">
-                                                <img src="images/items/${items[i].product.filename}" class="item-img" alt="${items[i].product.title}">
+                                                <img 
+                                                    id="product-img-${i}"
+                                                    src="images/items/${items[i].product.filename}-${items[i].product.colors[0]}.jpg" 
+                                                    class="item-img" 
+                                                    alt="${items[i].product.title}">
                                             </div>
                                             <div class="card-body">
                                                 <h3 class="card-title">${items[i].product.title}</h3>
@@ -94,6 +154,12 @@
                                                 <p class="card-info">Brand: ${items[i].product.brand}</p>
                                                 <p class="card-info">In stock: ${items[i].product.itemsLeft}</p>
                                                 <p class="card-info">Category: ${items[i].product.category}</p>
+                                                
+                                                <div class="card-colors">
+                                                    <p class="card-info">Color:</p>
+                                                    <p class="card-info">${colorsText}</p>
+                                                </div>
+
                                                 <button class="card-button">Add to cart</button>
                                             </div>
                                         </div>

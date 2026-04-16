@@ -45,7 +45,7 @@ const items = [
       {
             product: {
                   title: "Apple AirPods Pro (2nd Gen)",
-                  filename: "Apple AirPods Pro 2nd Gen.jpg",
+                  filename: "Apple AirPods Pro 2nd Gen",
                   price: 258.21,
                   itemsLeft: 6993,
                   category: "Electronics",
@@ -62,13 +62,14 @@ const items = [
                   `,
                   id: 0,
                   bestseller: false,
-                  rating: 5
+                  rating: 5,
+                  colors: ["White"]
             }
       },
       {
             product: {
                   title: "Sony WH-1000XM5 Premium Headphones",
-                  filename: "Sony WH-1000XM5 Premium Headphones.jpg",
+                  filename: "Sony WH-1000XM5 Premium Headphones",
                   price: 248.00,
                   itemsLeft: 7864,
                   category: "Electronics",
@@ -82,13 +83,14 @@ const items = [
                   `,
                   id: 1,
                   bestseller: false,
-                  rating: 4
+                  rating: 4,
+                  colors: ["Black", "Silver", "Blue"]
             }
       },
       {
             product: {
                   title: "Amazon Echo Dot (newest model)",
-                  filename: "Amazon Echo Dot newest model.jpg",
+                  filename: "Amazon Echo Dot newest model",
                   price: 49.99,
                   itemsLeft: 3520,
                   category: "Electronics",
@@ -102,13 +104,14 @@ const items = [
                   `,
                   id: 2,
                   bestseller: true,
-                  rating: 5
+                  rating: 5,
+                  colors: ["Charcoal", "Blue", "White"]
             }
       },
       {
             product: {
                   title: "Roku Streaming Stick 4K",
-                  filename: "Roku Streaming Stick 4K.jpg",
+                  filename: "Roku Streaming Stick 4K",
                   price: 40.99,
                   itemsLeft: 532,
                   category: "Electronics",
@@ -126,13 +129,14 @@ const items = [
                   `,
                   id: 4,
                   bestseller: false,
-                  rating: 3
+                  rating: 3,
+                  colors: ["Black"]
             }
       },
       {
             product: {
                   title: "2022 Apple MacBook Air with Apple M2 Chip",
-                  filename: "2022 Apple MacBook Air with Apple M2 Chip.jpg",
+                  filename: "2022 Apple MacBook Air with Apple M2 Chip",
                   price: 799.00,
                   itemsLeft: 24,
                   category: "Computers & Laptops",
@@ -149,13 +153,14 @@ const items = [
                   `,
                   id: 5,
                   bestseller: true,
-                  rating: 5
+                  rating: 5,
+                  colors: ["Space Gray", "Midnight"]
             }
       },
       {
             product: {
                   title: 'Lenovo IdeaPad Gaming 3 15 Laptop, 15.6" FHD',
-                  filename: "Lenovo IdeaPad Gaming 3 15 Laptop, 15.6 FHD.jpg",
+                  filename: "Lenovo IdeaPad Gaming 3 15 Laptop, 15.6 FHD",
                   price: 649.99,
                   itemsLeft: 0,
                   category: "Computers & Laptops",
@@ -169,13 +174,14 @@ const items = [
                   `,
                   id: 6,
                   bestseller: false,
-                  rating: 2
+                  rating: 2,
+                  colors: ["Shadow Black"]
             }
       },
       {
             product: {
                   title: "Logitech MX Master 3S Wireless Mouse Standard",
-                  filename: "Logitech MX Master 3S Wireless Mouse Standard.jpg",
+                  filename: "Logitech MX Master 3S Wireless Mouse Standard",
                   price: 175.25,
                   itemsLeft: 714,
                   category: "Computers & Laptops",
@@ -192,13 +198,14 @@ const items = [
                   `,
                   id: 7,
                   bestseller: false,
-                  rating: 4
+                  rating: 4,
+                  colors: ["Graphite"]
             }
       },
       {
             product: {
                   title: "SANDISK 1TB Extreme Portable SSD",
-                  filename: "SANDISK 1TB Extreme Portable SSD.jpg",
+                  filename: "SANDISK 1TB Extreme Portable SSD",
                   price: 186.65,
                   itemsLeft: 9674,
                   category: "Computers & Laptops",
@@ -212,13 +219,14 @@ const items = [
                   `,
                   id: 8,
                   bestseller: false,
-                  rating: 3
+                  rating: 3,
+                  colors: ["Black", "Monterey", "Blue"]
             }
       },
       {
             product: {
                   title: "Ninja Air Fryer | 4 QT Capacity | 4-in-1",
-                  filename: "Ninja Air Fryer  4 QT Capacity  4in1.jpg",
+                  filename: "Ninja Air Fryer  4 QT Capacity  4in1",
                   price: 89.99,
                   itemsLeft: 453,
                   category: "Kitchen Appliances",
@@ -235,13 +243,14 @@ const items = [
                   `,
                   id: 9,
                   bestseller: false,
-                  rating: 4
+                  rating: 4,
+                  colors: ["Grey"]
             }
       },
       {
             product: {
                   title: "Keurig K-Classic Single Serve Coffee Maker",
-                  filename: "Keurig K-Classic Single Serve Coffee Maker.jpg",
+                  filename: "Keurig K-Classic Single Serve Coffee Maker",
                   price: 119.99,
                   itemsLeft: 64,
                   category: "Kitchen Appliances",
@@ -260,13 +269,14 @@ const items = [
                   `,
                   id: 10,
                   bestseller: true,
-                  rating: 5
+                  rating: 5,
+                  colors: ["Black"]
             }
       },
       {
             product: {
                   title: "Crock-Pot 3-Quart Manual Slow Cooker",
-                  filename: "Crock-Pot 3-Quart Manual Slow Cooker, Serves 3 People.jpg",
+                  filename: "Crock-Pot 3-Quart Manual Slow Cooker, Serves 3 People",
                   price: 31.99,
                   itemsLeft: 6434,
                   category: "Kitchen Appliances",
@@ -282,13 +292,14 @@ const items = [
                   `,
                   id: 11,
                   bestseller: false,
-                  rating: 3
+                  rating: 3,
+                  colors: ["Stainless Steel"]
             }
       },
       {
             product: {
                   title: "TRX All-In-One Home Gym System",
-                  filename: "TRX All-In-One Home Gym System.jpg",
+                  filename: "TRX All-In-One Home Gym System",
                   price: 184.95,
                   itemsLeft: 43,
                   category: "Fitness & Sports",
@@ -303,13 +314,14 @@ const items = [
                   `,
                   id: 12,
                   bestseller: true,
-                  rating: 4
+                  rating: 4,
+                  colors: ["Black"]
             }
       },
       {
             product: {
                   title: "WHATAFIT Resistance Bands, Exercise Bands",
-                  filename: "WHATAFIT Resistance Bands, Exercise Bands.jpg",
+                  filename: "WHATAFIT Resistance Bands, Exercise Bands",
                   price: 27.97,
                   itemsLeft: 4352,
                   category: "Fitness & Sports",
@@ -325,13 +337,14 @@ const items = [
                   `,
                   id: 13,
                   bestseller: false,
-                  rating: 2
+                  rating: 2,
+                  colors: ["Multi"]
             }
       },
       {
             product: {
                   title: "Yes4All Kettlebell, 5-100 LB",
-                  filename: "Yes4All Kettlebell, 5-100 LB.jpg",
+                  filename: "Yes4All Kettlebell, 5-100 LB",
                   price: 23.09,
                   itemsLeft: 242,
                   category: "Fitness & Sports",
@@ -347,13 +360,14 @@ const items = [
                   `,
                   id: 14,
                   bestseller: false,
-                  rating: 3
+                  rating: 3,
+                  colors: ["Dark Blue"]
             }
       },
       {
             product: {
                   title: "Timex Weekender 38mm Unisex Analog Watch",
-                  filename: "Timex Weekender 38mm Unisex Analog Watch.jpg",
+                  filename: "Timex Weekender 38mm Unisex Analog Watch",
                   price: 45.25,
                   itemsLeft: 7546,
                   category: "Clothing & Accessories",
@@ -367,13 +381,14 @@ const items = [
                   `,
                   id: 15,
                   bestseller: false,
-                  rating: 4
+                  rating: 4,
+                  colors: ["Green", "Cream", "Black"]
             }
       },
       {
             product: {
                   title: "Carhartt Men's Knit Cuffed Beanie",
-                  filename: "Carhartt Men's Knit Cuffed Beanie.jpg",
+                  filename: "Carhartt Men's Knit Cuffed Beanie",
                   price: 19.99,
                   itemsLeft: 9897,
                   category: "Clothing & Accessories",
@@ -386,13 +401,14 @@ const items = [
                   `,
                   id: 16,
                   bestseller: true,
-                  rating: 5
+                  rating: 5,
+                  colors: ["Black", "Sandstone"]
             }
       },
       {
             product: {
                   title: "PlayStation 5 Console (PS5)",
-                  filename: "PlayStation 5 Console (PS5).jpg",
+                  filename: "PlayStation 5 Console (PS5)",
                   price: 499.00,
                   itemsLeft: 6464,
                   category: "Gaming & Entertainment",
@@ -405,13 +421,14 @@ const items = [
                   `,
                   id: 17,
                   bestseller: false,
-                  rating: 4
+                  rating: 4,
+                  colors: ["White"]
             }
       },
       {
             product: {
                   title: "Xbox Series X - Gaming Console - 1TB SSD",
-                  filename: "Xbox Series X - Gaming Console - 1TB SSD.jpg",
+                  filename: "Xbox Series X - Gaming Console - 1TB SSD",
                   price: 648.00,
                   itemsLeft: 5351,
                   category: "Gaming & Entertainment",
@@ -428,13 +445,14 @@ const items = [
                   `,
                   id: 18,
                   bestseller: false,
-                  rating: 5
+                  rating: 5,
+                  colors: ["Black"]
             }
       },
       {
             product: {
                   title: "Nintendo Switch – OLED Model",
-                  filename: "Nintendo Switch – OLED Model.jpg",
+                  filename: "Nintendo Switch – OLED Model",
                   price: 365.00,
                   itemsLeft: 58,
                   category: "Gaming & Entertainment",
@@ -448,7 +466,8 @@ const items = [
                   `,
                   id: 19,
                   bestseller: true,
-                  rating: 5
+                  rating: 5,
+                  colors: ["White"]
             }
-      },
+      }
 ];
