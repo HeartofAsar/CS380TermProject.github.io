@@ -1,23 +1,16 @@
-.main-table,
-.shop-table {
-    width: 100%;
-}
-
-.sidebar,
-.shop-card {
-    font-family: Arial, sans-serif;
-}
-
-.sidebar,
-.products-area,
-.shop-table td {
-    vertical-align: top;
+.shop-main {
+    width: 95%;
+    margin: 20px auto;
 }
 
 .sidebar {
-    width: 240px;
+    display: inline-block;
+    width: 22%;
+    vertical-align: top;
     padding: 20px;
     background: #eeeded;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
 }
 
 .sidebar h2 {
@@ -29,7 +22,7 @@
 }
 
 .filter-box h4 {
-    margin: 0 0 10px;
+    margin: 0 0 10px 0;
 }
 
 .filter-box p {
@@ -38,29 +31,31 @@
 }
 
 .products-area {
+    display: inline-block;
+    width: 75%;
+    vertical-align: top;
     padding: 20px;
     background: #ffffff;
 }
 
-.shop-table {
-    width: 100%;
-    border-spacing: 18px;
-}
-
-.shop-table td {
-    width: 25%;
+.products-area h1 {
+    margin-top: 0;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .shop-card {
     display: inline-block;
     width: 260px;
-    min-height: 460px;
-    height: 610px;
+    min-height: 520px;
+    margin: 12px;
+    vertical-align: top;
     overflow: hidden;
     background: #f3f3f3;
     border: 1px solid #dddddd;
     border-radius: 6px;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 .card-bestseller {
@@ -70,6 +65,7 @@
     font-weight: bold;
     color: white;
     background: #d96a0b;
+    margin-top: 10px;
 }
 
 .card-img-box {
@@ -89,16 +85,13 @@
 }
 
 .card-body {
-    height: 205px;
-    padding: 12px 15px 15px;
-    box-sizing: border-box;
+    padding: 12px 15px 15px 15px;
 }
 
 .card-title {
     margin: 0;
-    height: 50px;
+    min-height: 50px;
     line-height: 1.25;
-    overflow: hidden;
     font-size: 18px;
 }
 
@@ -113,21 +106,49 @@
 }
 
 .card-info {
-    margin: 8px 0 0;
+    margin: 8px 0 0 0;
     font-size: 14px;
+}
+
+.qty-label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.qty-box {
+    width: 70px;
+    padding: 6px;
+    margin-top: 6px;
 }
 
 .card-button {
     display: block;
-    width: 100%;
-    margin-top: 14px;
+    width: 85%;
+    margin: 14px auto 0 auto;
     padding: 10px;
     background: #34a853;
     border: 1px solid #2d9348;
     color: white;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .card-button:hover {
     background: #2d9348;
+}
+
+.shop-submit-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.shop-submit-area input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: rgb(13, 38, 0);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
 }

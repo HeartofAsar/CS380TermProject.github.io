@@ -1,22 +1,30 @@
-body{
+body {
     margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* header / nav */
+header {
+    background-color: rgb(13, 38, 0);
+    display: block;
     padding: 0;
 }
 
-header{
-    background-color: rgb(13, 38, 0);
-    display: flex;
-    align-items: center;
+.logo-img {
+    width: 150px;
+    height: auto;
+    padding: 1rem;
+    vertical-align: middle;
 }
 
-.HomeNav{
-    display: flex;
-    margin-left: auto;
+.HomeNav {
+    display: inline-block;
+    vertical-align: middle;
 }
 
-/* Style the links inside the navigation bar */
-.HomeNav a{
-    display: block;
+.HomeNav a {
+    display: inline-block;
     color: #f2f2f2;
     text-align: center;
     padding: 28px 16px;
@@ -24,43 +32,101 @@ header{
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
     font-weight: bold;
-
 }
 
-/* Change the color of links on hover */
-.HomeNav a:hover{
+.HomeNav a:hover {
     background-color: #ddd;
     color: black;
 }
 
-/*Add active class to highlight the current page */
-.HomeNav a:active{
+.HomeNav a:active {
     background-color: #04AA6D;
     color: white;
 }
 
-* {box-sizing:border-box;}
-/* Carousel Container */
-.Carousel-Container{
-  box-sizing: border-box;
-  max-width: 100%;
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-  margin: auto;
+/* hero */
+.Hero {
+    background-color: rgb(13, 38, 0);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 25px;
 }
 
-/*  images */
-.Carousel-slides{
-    
+.Hero h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.Hero p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.hero-link {
+    display: inline-block;
+    background-color: white;
+    color: rgb(13, 38, 0);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.hero-link:hover {
+    background-color: #dddddd;
+}
+
+/* general section title */
+.section-title {
+    text-align: center;
+    margin: 30px 0 15px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* categories */
+.categories {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-box {
+    display: inline-block;
+    width: 220px;
+    margin: 10px;
+    padding: 18px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* carousel */
+* {
+    box-sizing: border-box;
+}
+
+.Carousel-Container {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.Carousel-slides {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-
-/* Next & Prev Buttons */
-.prev, .next{
+.prev,
+.next {
     position: absolute;
     top: 50%;
     width: auto;
@@ -70,27 +136,24 @@ header{
     background-color: #000000;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
 
-/* Position the "next button" to the right */
-.prev{
+.prev {
     left: 10px;
-   
 }
-.next{
+
+.next {
     right: 10px;
 }
 
-/* On hover, add a black background color with see-through */
-.prev:hover, .next:hover{
+.prev:hover,
+.next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption Text */
-.Carousel-text{
+.Carousel-text {
     color: #f2f2f2;
     font-size: 18px;
     position: absolute;
@@ -100,8 +163,7 @@ header{
     z-index: 10;
 }
 
-/* Dots/Circles*/
-.dot{
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -111,62 +173,59 @@ header{
     display: inline-block;
 }
 
-.dot.active{
+.dot.active {
     background-color: #04AA6D;
 }
 
-/* Product Card */
-
-.featured{
-     display: flex;
-    flex-direction: row;
-    align-items: stretch;
+/* product cards */
+.featured {
+    text-align: center;
+    padding-bottom: 40px;
 }
-.product-card{
-    box-shadow: 0 4px  8px 0 rgba(0,0,0,0.2);
-    max-width: 300px;
-    width: 100%;
-    height: 500px;
-    flex: 1 1 0;
-    margin: auto;
+
+.product-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 260px;
+    min-height: 390px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px;
     padding: 16px 0;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
 }
 
-.product-card h1{
+.product-card h3 {
     min-height: 56px;
-    margin: 12px 0 8px;
+    margin: 12px 10px 8px 10px;
 }
 
-.product-card img{
+.product-card img {
     width: 80%;
     height: 170px;
     object-fit: contain;
     margin: 0 auto;
 }
 
-.price{
+.price {
     color: rgb(72, 72, 72);
     font-size: 20px;
 }
 
-.items-left{
+.items-left {
     color: rgb(144, 144, 144);
     font-weight: 100;
     font-size: 15px;
 }
 
-.only-left-caution{
+.only-left-caution {
     color: white;
     background-color: rgb(169, 0, 0);
 }
 
-.product-card button{
+.product-card button {
     border: none;
     padding: 12px;
     color: white;
@@ -178,14 +237,47 @@ header{
     font-size: 18px;
 }
 
-.product-card hover{
-    opacity: 0.7;
+.product-card:hover {
+    opacity: 0.9;
 }
 
+/* footer */
+footer {
+    background-color: rgb(13, 38, 0);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
+/* cart page */
+.cart-main {
+    width: 90%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+}
 
-.logo-img{
-    width: 150px;
-    height: auto;
-    padding: 1rem;
+.cart-main h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cart-empty {
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.total-box {
+    text-align: right;
+    margin-top: 25px;
 }
