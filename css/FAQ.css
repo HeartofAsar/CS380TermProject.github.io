@@ -1,0 +1,30 @@
+.FAQ-Container{
+    background-color: #d4d5d5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.FAQ-Container img{
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#h1{
+    color: #04AA64;
+    text-align: center;
+}
+
+.FAQ-Details summary {
+    width: 600px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.FAQ-text p{
+    font-size: 18px;
+    
+}
