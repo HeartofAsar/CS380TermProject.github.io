@@ -79,6 +79,27 @@ header {
     background-color: #dddddd;
 }
 
+.Hero button {
+    border: none;
+    background-color: white;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.Hero button a {
+    display: inline-block;
+    color: rgb(13, 38, 0);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.Hero button:hover {
+    background-color: #dddddd;
+}
+
 /* general section title */
 .section-title {
     text-align: center;
@@ -105,6 +126,19 @@ header {
     font-weight: bold;
 }
 
+.categories div {
+    display: inline-block;
+    width: 220px;
+    margin: 10px;
+    padding: 18px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
 /* carousel */
 * {
     box-sizing: border-box;
@@ -123,6 +157,13 @@ header {
     width: 100%;
     height: 100%;
     position: relative;
+}
+
+.Carousel-slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .prev,
@@ -197,6 +238,12 @@ header {
     border-radius: 10px;
 }
 
+.product-card h1 {
+    min-height: 56px;
+    margin: 12px 10px 8px 10px;
+    font-size: 22px;
+}
+
 .product-card h3 {
     min-height: 56px;
     margin: 12px 10px 8px 10px;
@@ -242,35 +289,41 @@ header {
 }
 
 /* footer */
-.index-footer{
-    background-color: rgb(13, 38,0);
+.index-footer {
+    background-color: rgb(13, 38, 0);
     padding: 60px 30px 0px 25px;
     color: #f0f9ff;
+    margin-top: 40px;
 }
 
-.footer-row{
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-row {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.col{
+.col {
     margin-bottom: 20px;
 }
 
-.col-text{
+.col-text {
     margin-bottom: 20px;
 }
 
-.footer-container h3{
+.footer-container h3 {
     margin-top: 0;
     margin-bottom: 12px;
     font-weight: bold;
     font-size: 16px;
 }
 
-.footer-container ul{
+.footer-container ul {
     padding: 0;
     list-style: none;
     line-height: 1.6;
@@ -278,35 +331,34 @@ header {
     margin-bottom: 0;
 }
 
-.footer-container ul a{
+.footer-container ul a {
     color: inherit;
     text-decoration: none;
     opacity: 0.6;
 }
 
-.footer-container ul a:hover{
+.footer-container ul a:hover {
     opacity: 0.8;
 }
 
-.col-text p{
+.col-text p {
     opacity: 0.7;
     font-size: 14px;
     line-height: 1.6;
 }
 
 /* Bottom Copyright Section */
-.footer-bottom{
+.footer-bottom {
     text-align: center;
     margin-top: 30px;
     padding-top: 20px;
 }
 
-.copyright{
-    display:  inline-block;
+.copyright {
+    display: inline-block;
     opacity: 0.4;
     font-size: 13px;
 }
-
 
 /* cart page */
 .cart-main {
