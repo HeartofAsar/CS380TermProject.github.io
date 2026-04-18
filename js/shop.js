@@ -114,7 +114,7 @@ function displayItems() {
                 for (let j = 0; j < items[i].product.colors.length; j++) {
                     let color = items[i].product.colors[j];
 
-                    if (j === 0) {
+                    if (j == 0) {
                         colorsText = colorsText + "<label>" + "<input type='radio' name='color-" +
                          items[i].product.id + "' value='" + color +
                           "' checked onchange=\"itemColorChange(" + i + ", '" + color + "')\">" +
