@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-         <title>PhinStore | JU</title>
-         <meta charset="utf-8">
-         <link rel="stylesheet" href="css/style.css">
-         <link rel="stylesheet" href="css/shop.css">
-         <script src="js/items.js"></script>
-         <script src="js/shop.js"></script>
-    </head>
 
-    <body>
-        <header>
+<head>
+    <title>PhinStore | JU</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="js/items.js"></script>
+    <script src="js/shop.js"></script>
+</head>
+
+<body>
+    <header>
         <!-- Navigation bar -->
-            <a href="index.html"><img class="logo-img" src="images/phinstore_Nameplate_white.png" alt="PhinStore logo"></a>
+        <a href="index.html"><img class="logo-img" src="images/phinstore_Nameplate_white.png" alt="PhinStore logo"></a>
         <div class="HomeNav" id="TopNav">
             <a href="index.html" class="active">Home</a>
             <a href="shop.html">Shop</a>
@@ -20,158 +21,38 @@
             <a href="tech.html">Tech</a>
             <a href="cart.html">Cart</a>
         </div>
-        </header>
-        <table class="main-table">
-            <tr>
-                <!-- left - filters -->
-                <td class="sidebar">
-                    <h2>Filters</h2>
+    </header>
+   <main class="shop-main">
 
-                    <div class="filter-box">
-                        <h4>Category</h4>
-                        <p><input type="checkbox"> Electronics</p>
-                        <p><input type="checkbox"> Books</p>
-                        <p><input type="checkbox"> Clothing</p>
-                    </div>
+    <div class="sidebar">
+        <h2>Filters</h2>
 
-                    <div class="filter-box">
-                        <h4>Price</h4>
-                        <p><input type="checkbox"> Under $50</p>
-                        <p><input type="checkbox"> $50 - $200</p>
-                        <p><input type="checkbox"> $200+</p>
-                    </div>
+        <div class="filter-box">
+            <h4>Category</h4>
+            <p><input type="checkbox" id="filter-electronics"> Electronics</p>
+            <p><input type="checkbox" id="filter-computers"> Computers &amp; Laptops</p>
+            <p><input type="checkbox" id="filter-gaming"> Gaming &amp; Entertainment</p>
+        </div>
 
-                    <div class="filter-box">
-                        <h4>Rating</h4>
-                        <p><input type="checkbox"> ★★★★★</p>
-                        <p><input type="checkbox"> ★★★★+</p>
-                    </div>
-                </td>
+        <div class="filter-box">
+            <h4>Price</h4>
+            <p><input type="checkbox" id="filter-under50"> Under $50</p>
+            <p><input type="checkbox" id="filter-50to200"> $50 - $200</p>
+            <p><input type="checkbox" id="filter-over200"> $200+</p>
+        </div>
 
-                <!-- right - items -->
-                <td class="products-area">
+        <div class="filter-box">
+            <h4>Rating</h4>
+            <p><input type="checkbox" id="filter-rating5"> ★★★★★</p>
+            <p><input type="checkbox" id="filter-rating4"> ★★★★+</p>
+        </div>
+    </div>
 
-                    <table class="shop-table">
-                        <script>
-                            document.write("<tr>");
-                            for (let i = 0; i < items.length; i++) {
+    <div class="products-area">
+        <h1>Shop Products</h1>
+        <div id="products-list"></div>
+    </div>
 
+</main>
 
-                                // BESTSELLER SIGN
-                                let bestsellerText = "";
-                                if (items[i].product.bestseller) {
-                                    bestsellerText = "<div class='card-bestseller'>Best Seller</div>";
-                                }
-
-
-                                // RATING STARS
-                                let ratingText = "";
-                                if (items[i].product.rating == 1) {
-                                    ratingText = "<p class='card-rating'>★</p>";
-                                }
-                                else if (items[i].product.rating == 2) {
-                                    ratingText = "<p class='card-rating'>★★</p>";
-                                }
-                                else if (items[i].product.rating == 3) {
-                                    ratingText = "<p class='card-rating'>★★★</p>";
-                                }
-                                else if (items[i].product.rating == 4) {
-                                    ratingText = "<p class='card-rating'>★★★★</p>";
-                                }
-                                else if (items[i].product.rating == 5) {
-                                    ratingText = "<p class='card-rating'>★★★★★</p>";
-                                }
-                                
-
-
-
-
-
-                                let colorsText = "";
-
-                                // taking every color for each item from items.js
-                                // + added length check to make sure to avoid error if item doesn't have colors
-                                if (items[i].product.colors.length > 0) {
-                                    for (let j = 0; j < items[i].product.colors.length; j++)
-                                    {
-
-
-                                        let color = items[i].product.colors[j];
-                                        // adding radio input for each color from items.js
-                                        // auto pick for first color in radio input
-
-                                        // if it is first color make it checked by the default
-                                        if (j === 0)
-                                        {
-                                            colorsText += `
-                                            <label>
-                                                <input type="radio" name="color-${items[i].product.id}" value="${color}" checked
-                                                    onchange="itemColorChange(${i}, '${color}')">
-                                                <!-- ${color} -->
-                                                ${color}
-                                            </label>
-                                        `;
-                                        }
-
-                                        // else, don't make it checked
-                                        else
-                                        {
-                                            colorsText += `
-                                            <label>
-                                                <input type="radio" name="color-${items[i].product.id}" value="${color}"
-                                                    onchange="itemColorChange(${i}, '${color}')">
-                                                <!-- ${color} -->
-                                                ${color}
-                                            </label>
-                                        `;
-                                        }
-                                        //
-                                    }
-                                }
-
-
-                                // if 4 items in a row make a new line
-                                if (i > 0 && i % 4 === 0) {
-                                    document.write("</tr><tr>");
-                                }
-
-                                // CARD CREATINF
-                                document.write(`
-                                    <td>
-                                        <div class="shop-card">
-                                            ${bestsellerText}
-                                            <div class="card-img-box">
-                                                <img 
-                                                    id="product-img-${i}"
-                                                    src="images/items/${items[i].product.filename}-${items[i].product.colors[0]}.jpg" 
-                                                    class="item-img" 
-                                                    alt="${items[i].product.title}">
-                                            </div>
-                                            <div class="card-body">
-                                                <h3 class="card-title">${items[i].product.title}</h3>
-                                                <p class="card-price">$${items[i].product.price}</p>
-                                                ${ratingText}
-                                                <p class="card-info">Brand: ${items[i].product.brand}</p>
-                                                <p class="card-info">In stock: ${items[i].product.itemsLeft}</p>
-                                                <p class="card-info">Category: ${items[i].product.category}</p>
-                                                
-                                                <div class="card-colors">
-                                                    <p class="card-info">Color:</p>
-                                                    <p class="card-info">${colorsText}</p>
-                                                </div>
-
-                                                <button class="card-button">Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                `);
-                            }
-                            document.write("</tr>");
-                        </script>
-                    </table>
-
-                </td>
-            </tr>
-        </table>
-    </body>
 </html>
