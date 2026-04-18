@@ -1,7 +1,5 @@
 /* Keeps track of which slide is currently showing */
 let slideIndex = 0;
-
-/* Start the slideshow as soon as the page loads this script */
 showSlides();
 
 /* 
@@ -15,13 +13,11 @@ function showSlides()
     /* Get all elements that use the Carousel-slides class */
     let slides = document.getElementsByClassName("Carousel-slides");
 
-    /* hide every slide first */
-    for (i = 0; i < slides.length; i++)
+    for(i = 0; i < slides.length; i++)
     {
         slides[i].style.display = "none";
     }
 
-    /* move to the next slide */
     slideIndex++;
 
     /* if going past the last slide, go back to the first one */
