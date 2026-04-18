@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <title>PhinStore | JU</title>
+         <meta charset="utf-8">
+         <link rel="stylesheet" href="css/style.css">
+         <link rel="stylesheet" href="css/returns.css">
+    </head>
+
+    <body>
+        <header>
+        <!-- Navigation bar -->
+            <a href="index.html"><img class="logo-img" src="images/phinstore_Nameplate_white.png" alt="PhinStore logo"></a>
+        <div class="HomeNav" id="TopNav">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="stationery.html">Stationery</a>
+            <a href="tech.html">Tech</a>
+            <a href="cart.html">Cart</a>
+        </div>
+        </header>
+    <main>
+        <div class="Returns-Header">
+            <h1>Returns</h1>
+            <p>At PhinStore, customer satisfaction is our top priority. Returns are accepted on all eligible items
+                within 30 days of purchase. For more details on how to start a return or to see our full list of execeptions,
+                please see the form below.</p>
+        </div>
+
+        <div class="Returns-Container">
+            <div class="Returns-Form">
+                <form action="get" method="http://www.randyconnolly.com/tests/process.php">
+
+                    <label for="UserName">Name:</label><br>
+                    <input type="text" id="UserName" name="name" placeholder="Full Name" required><br><br>
+                    
+                    <label for="UserEmail">Email Address:</label><br>
+                    <input type="email" id="UserEmail" name="email" placeholder="Email Address" required><br><br>
+
+                    <label for="OrderID">Order Number:</label><br>
+                    <input type="text" id="OrderID" name="orderID" placeholder="e.g. #12345" required><br><br>
+
+                    <label for="ReturnReason">Reason for Return:</label><br>
+                    <select id="ReturnReason" name="reason">
+                        <option value="wrong-size">Wrong Size</option>
+                        <option value="damaged">Item Damaged</option>
+                        <option value="not-as-described">Not as Described</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+
+                    <label for="Details">Additional Comments:</label><br>
+                    <input type="text" id="Details" name="details" placeholder="Additional comments"><br>
+
+                    <input type="submit" value="Submitted">
+                    <input type="reset" value="Reset Form">
+
+                </form>
+            </div>
+        </div>
+    </main>
+      <footer>
+        <!-- Footer -->
+         <div class="index-footer">
+        <footer class="footer-container">
+            <div class="footer-row">
+                <div class="col">
+                    <h3>Get to Know Us</h3>
+                    <ul>
+                        <li><a href="about.html">About PhinStore</a></li>
+                        <li><a href="https://github.com/HeartofAsar/CS380TermProject.github.io/settings/access">Github</a></li>
+                        <li><a href="Terms.html">Terms of Use</a></li>
+                        <li><a href="Newsletter.html">PhinStore Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Let Us Help You</h3>
+                    <ul>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="Shipping.html">Shipping Rates & Policies</a></li>
+                        <li><a href="Returns.html">Returns & Replacements</a></li>
+                    </ul>
+                </div>
+                    <div class="col-text">
+                        <p>The online store for all your college needs!</p>
+                    </div>
+                    <div class="footer-bottom">
+                        <em class="copyright">@ 2026 PhinStore</em>
+                    </div>
+                </div>
+      </footer>
+    </body>
+</html>

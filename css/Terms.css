@@ -1,0 +1,61 @@
+.Terms-Head{
+    background-color: rgb(13, 38, 0);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.Terms-Container{
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px;
+}
+
+.Terms-Head p{
+    color: white;
+    font-size: 18px;
+    width: 700px;
+    margin: 10px auto 0;
+    line-height: 1.6;
+    text-align: center;
+}
+.Terms-Container h3{
+     color: #04AA6D;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.Terms-Container ol{
+    padding-left: 20px;
+
+}
+
+.Terms-Container li{
+    margin-bottom: 20px;
+}
+
+.Terms-Container li ol{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.Terms-Container li ol li{
+    margin-bottom: 8px;
+}
+
+.Terms-Container p{
+     color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.last-updated{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #04AA6D;
+    text-align: right;
+}
+

@@ -1,0 +1,56 @@
+/* Header Styling */
+.Returns-Header{
+    background-color: #0d2600;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgb(13, 38, 0);
+}
+
+.Returns-Header h1{
+    color: #04AA64;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.Returns-Header P{
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Container Styling */
+.Returns-Container{
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* Form Styling */
+.Returns-Form{
+    width: 100%;
+    max-width: 500px;
+    background-color: #bebfc4;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Styling */
+.Returns-Form label{
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #04AA64;
+}
+
+.Returns-Form input, select{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
