@@ -27,13 +27,13 @@ function displayItems() {
     let rating5Checked = document.getElementById("filter-rating5").checked;
     let rating4Checked = document.getElementById("filter-rating4").checked;
 
-    /* Check every product in the items array */
+    // check every product in the items array //
     for (let i = 0; i < items.length; i++) {
 
-        /* Start by assuming the item should be shown */
+        // start by assuming the item should be shown //
         let showItem = true;
 
-        /* ---------- CATEGORY FILTER ---------- */
+        // CATEGORY FILTER //
         if (electronicsChecked || computersChecked || gamingChecked) {
             showItem = false;
 
@@ -50,7 +50,7 @@ function displayItems() {
             }
         }
 
-        /* ---------- PRICE FILTER ---------- */
+        //PRICE FILTER //
         if (showItem && (under50Checked || between50and200Checked || over200Checked)) {
             showItem = false;
 
@@ -67,7 +67,7 @@ function displayItems() {
             }
         }
 
-        /* ---------- RATING FILTER ---------- */
+        //RATING FILTER //
         if (showItem && (rating5Checked || rating4Checked)) {
             showItem = false;
 
@@ -80,7 +80,7 @@ function displayItems() {
             }
         }
 
-        /* ---------- BUILD CARD ONLY IF ITEM PASSES FILTERS ---------- */
+        //BUILD CARD ONLY IF ITEM PASSES FILTERS//
         if (showItem) {
 
             /* Bestseller label */
@@ -107,7 +107,7 @@ function displayItems() {
                 ratingText = "<p class='card-rating'>★★★★★</p>";
             }
 
-            /* Build the color radio buttons */
+            //  color radio buttons
             let colorsText = "";
 
             if (items[i].product.colors.length > 0) {
@@ -117,7 +117,7 @@ function displayItems() {
                     if (j == 0) {
                         colorsText = colorsText + "<label>" + "<input type='radio' name='color-" +
                          items[i].product.id + "' value='" + color +
-                          "' checked onchange=\"itemColorChange(" + i + ", '" + color + "')\">" +
+                          "'checked onchange=\"itemColorChange(" + i + ", '" + color + "')\">" +
                                 color +
                             "</label>";
                     }
@@ -131,7 +131,7 @@ function displayItems() {
                 }
             }
 
-            /* add this product card to the output */
+            //add this product card to the output 
             output = output +
                 "<div class='shop-card'>" +
                     bestsellerText +
@@ -155,12 +155,12 @@ function displayItems() {
         }
     }
 
-    /* put the final HTML into the products-list area */
+    //put the final HTML into the products-list area 
     document.getElementById("products-list").innerHTML = output;
 }
 
 /* 
-   Wait until the page loads, then connect each filter checkbox
+   wait until the page loads, then connect each filter checkbox
    to the displayItems function
 */
 window.addEventListener("load", function () {
@@ -176,6 +176,6 @@ window.addEventListener("load", function () {
     document.getElementById("filter-rating5").addEventListener("change", displayItems);
     document.getElementById("filter-rating4").addEventListener("change", displayItems);
 
-    /* Show all products when the page first loads */
+    //show all products when the page first load 
     displayItems();
 });
