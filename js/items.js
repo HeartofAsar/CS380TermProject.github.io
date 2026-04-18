@@ -388,7 +388,7 @@ const items = [
       {
             product: {
                   title: "Carhartt Men's Knit Cuffed Beanie",
-                  filename: "Carhartt Men's Knit Cuffed Beanie",
+                  filename: "Carhartt Mens Knit Cuffed Beanie",
                   price: 19.99,
                   itemsLeft: 9897,
                   category: "Clothing & Accessories",
