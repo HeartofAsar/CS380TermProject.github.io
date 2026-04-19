@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <title>PhinStore | JU</title>
+         <meta charset="utf-8">
+         <link rel="stylesheet" href="css/style.css">
+         <link rel="stylesheet" href="css/cart.css">
+         <script src="js/index.js"></script>
+         <script src="js/items.js"></script>
+    </head>
+
+    <body>
+        <header>
+        <!-- Navigation bar -->
+            <a href="index.html"><img class="logo-img" src="images/phinstore_Nameplate_white.png" alt="PhinStore logo"></a>
+        <div class="HomeNav" id="TopNav">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="cart.html">Cart</a>
+            <a href="about.html">About Us</a>
+        </div>
+        </header>
+
+        <div class="items-area">
+            <h1>Your Cart</h1>
+            <div class="cart-card">
+            <script>
+            for (let i = 0; i < cartItems.length; i++)
+            {
+                for (let j = 0; j < items.length; j++)
+                {
+                    if (items[j].product.id === cartItems[i].product.id)
+                    {
+                        let imageSrc = `<img class="cart-img" src="images/items/${items[j].product.filename}-${cartItems[i].product.color}.jpg"/>`;
+                        document.write(`
+                        <div class="cart-item-div">
+                            <div class="cart-img-div">
+                                ${imageSrc}
+                            </div>
+
+                            <div class="cart-body">
+                                <h3 class="cart-title">${items[j].product.title}</h3>
+                                <p class="cart-price">$${items[j].product.price}</p>
+                                <p class="cart-info"><b>Color</b>: ${cartItems[i].product.color}</p>
+                                <br>
+                                <details>
+                                    <summary>
+                                        <b>Description</b>
+                                    </summary>
+                                    <p class="cart-info">${items[j].product.description}</p>
+                                </details>
+                            </div>
+                        </div>
+                        `);
+                    }
+                }
+            }
+            </script>
+            </div>
+
+            
+            <script>
+            let cartTotal = 0;
+            let cartTax = 0.06;
+            let cartGrandTotal = 0;
+            for (let i = 0; i < cartItems.length; i++)
+            {
+                for (let j = 0; j < items.length; j++)
+                {
+                    if (items[j].product.id === cartItems[i].product.id)
+                    {
+                        cartTotal += items[j].product.price;
+                    }
+                }
+            }
+
+            cartGrandTotal = (cartTotal + (cartTotal * cartTax)).toFixed(2);
+
+            document.write(`
+            <div class="cart-summary">
+                <p class="cart-total-text">Total: <span id="cart-total-value">$${cartTotal}</span></p><br>
+                <p class="cart-total-text">Tax: <span id="cart-total-value">${cartTax*100}%</span></p><br>
+                <p class="cart-grand-total-text">Grand Total: <span id="cart-total-value">$${cartGrandTotal}</span></p><br>
+                <a href="Shipping.html"><p class="cart-delivery-text">Read about Shipping Fee*</p></a><br><br>
+
+                <button class="pay-button" onclick="alertFunction()" type="button">Proceed to Payment</button>
+            </div>
+            `);
+            function alertFunction(){
+                alert("Order has been placed!");
+            }
+
+            
+            </script>
+
+
+
+        </div>
+
+        <div class="index-footer">
+        <footer class="footer-container">
+            <div class="footer-row">
+                <div class="col">
+                    <h3>Get to Know Us</h3>
+                    <ul>
+                        <li><a href="about.html">About PhinStore</a></li>
+                        <li><a href="https://github.com/HeartofAsar/CS380TermProject.github.io/settings/access">Github</a></li>
+                        <li><a href="Terms.html">Terms of Use</a></li>
+                        <li><a href="Newsletter.html">PhinStore Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Let Us Help You</h3>
+                    <ul>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="Shipping.html">Shipping Rates & Policies</a></li>
+                        <li><a href="Returns.html">Returns & Replacements</a></li>
+                    </ul>
+                </div>
+                    <div class="col-text">
+                        <p>The online store for all your college needs!</p>
+                    </div>
+                    <div class="footer-bottom">
+                        <em class="copyright">@ 2026 PhinStore</em>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>

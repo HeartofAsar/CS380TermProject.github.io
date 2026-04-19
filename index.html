@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <title>PhinStore | JU</title>
+         <meta charset="utf-8">
+         <link rel="stylesheet" href="css/style.css">
+         <script src="js/index.js"></script>
+         <script src="js/items.js"></script>
+    </head>
+
+    <body>
+        <header>
+        <!-- Navigation bar -->
+            <a href="index.html"><img class="logo-img" src="images/phinstore_Nameplate_white.png" alt="PhinStore logo"></a>
+        <div class="HomeNav" id="TopNav">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="cart.html">Cart</a>
+            <a href="about.html">About Us</a>
+        </div>
+        </header>
+    <main>
+        <!-- Content -->
+         <section class="Hero">
+            <h1>Welcome to Phin Store</h1>
+            <p>Shop merch, supplies, and tech essentials</p>
+            <button><a href="shop.html">Shop Now!</a></button>
+         </section>
+
+         <!-- Carousel  -->
+        <div class="Carousel-Container">
+            <div class="Carousel-slides">
+                <a href="shop.html"><img src="images/PhinStore Slide 1.png" alt="Apple products"></a>
+            </div>
+            <div class="Carousel-slides">
+                <a href="shop.html"><img src="images/PhinStore Slide 2.png"></a>
+            </div>
+            <div class="Carousel-slides">
+                <a href="shop.html"><img src="images/PhinStore Slide 3.png"></a>
+            </div>
+            <div class="Carousel-slides">
+                <a href="shop.html"><img src="images/PhinStore Slide 4.png" alt="Apple products"></a>
+            </div>
+            <div class="Carousel-slides">
+                <a href="shop.html"><img src="images/PhinStore Slide 5.png" alt="Apple products"></a>
+            </div>
+        </div>
+
+         <section class="categories">
+             <div>Stationery</div>
+            <div>Merchandise</div>
+            <div>Tech</div>
+         </section>
+
+
+         <section class="featured">
+                <script>
+                for (let i = 0; i < itemsHomepage.length; i++)
+                {
+                let itemsLeftText = "";
+                document.write(`
+                    <div class="product-card">
+                    <img src="images/${itemsHomepage[i].product.filename}" style="width: 80%" alt="${itemsHomepage[i].product.filename}">
+                    <h1>${itemsHomepage[i].product.title}</h1>
+                    <p><a href="shop.html">
+                        <button type="button" onclick="../shop.html">See more</button>
+                    </a></p>
+                    </div>
+                `);
+                }
+                </script>
+            </section>
+         </section>
+
+    </main>
+
+    <footer>
+        <!-- Footer -->
+         <div class="index-footer">
+        <footer class="footer-container">
+            <div class="footer-row">
+                <div class="col">
+                    <h3>Get to Know Us</h3>
+                    <ul>
+                        <li><a href="about.html">About PhinStore</a></li>
+                        <li><a href="https://github.com/HeartofAsar/CS380TermProject.github.io/settings/access">Github</a></li>
+                        <li><a href="Terms.html">Terms of Use</a></li>
+                        <li><a href="Newsletter.html">PhinStore Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Let Us Help You</h3>
+                    <ul>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="Shipping.html">Shipping Rates & Policies</a></li>
+                        <li><a href="Returns.html">Returns & Replacements</a></li>
+                    </ul>
+                </div>
+                    <div class="col-text">
+                        <p>The online store for all your college needs!</p>
+                    </div>
+                    <div class="footer-bottom">
+                        <em class="copyright">@ 2026 PhinStore</em>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>
