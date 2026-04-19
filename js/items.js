@@ -51,14 +51,14 @@ const items = [
                   category: "Electronics",
                   brand: "Apple",
                   description: `
-                  RICHER AUDIO EXPERIENCE – The Apple-designed H2 chip pushes advanced audio performance even further, resulting in smarter noise cancellation and more immersive sound. The low-distortion, custom-built driver delivers crisp, clear high notes and deep, rich bass in stunning definition. So every sound is more vivid than ever..Note : If the size of the earbud tips does not match the size of your ear canals or the headset is not worn properly in your ears, you may not obtain the correct sound qualities or call performance. Change the earbud tips to ones that fit more snugly in your ear
-                  NEXT-LEVEL ACTIVE NOISE CANCELLATION – Up to 2x more Active Noise Cancellation than the previous AirPods Pro for dramatically less noise on your commute, or when you want to focus. Adaptive Transparency lets you comfortably hear the world around you, adjusting for intense noise—like sirens or construction—in real time.
-                  CUSTOMIZABLE FIT – Now with four pairs of silicone tips (XS, S, M, L) to fit a wider range of ears and provide all-day comfort. The tips create an acoustic seal to help keep out noise and secure AirPods Pro in place.
-                  SOUND ALL AROUND – Personalized Spatial Audio surrounds you in sound tuned just for you. It works with dynamic head tracking to immerse you deeper in music and movies.
-                  HIGHER LEVEL OF CONTROL – Now you can swipe the stem to adjust volume. Press it to play and pause music or to answer and end a call, or hold it to switch between Active Noise Cancellation and Adaptive Transparency.
-                  A LEAP IN BATTERY LIFE – Up to 6 hours of listening time with Active Noise Cancellation enabled — 33% more than AirPods Pro (1st generation). With the charging case, you can get 30 hours of total listening time with Active Noise Cancellation enabled — 6 hours longer than AirPods Pro (1st generation).
-                  A MORE CAPABLE CASE – Keep track of AirPods Pro with Precision Finding and a built-in speaker. A lanyard loop keeps your AirPods Pro close. Charge with an Apple Watch or MagSafe charger, or use the Lightning connector or a Qi-certified charger.
-                  MAGICAL EXPERIENCE – Quick access to Siri by saying “Hey Siri”. Easy setup, in-ear detection, and automatic switching between devices. Audio Sharing lets you share a song or a show between two sets of AirPods on your iPhone, iPad, iPod touch, or Apple TV.
+                  <br>- RICHER AUDIO EXPERIENCE – The Apple-designed H2 chip pushes advanced audio performance even further, resulting in smarter noise cancellation and more immersive sound. The low-distortion, custom-built driver delivers crisp, clear high notes and deep, rich bass in stunning definition. So every sound is more vivid than ever..Note : If the size of the earbud tips does not match the size of your ear canals or the headset is not worn properly in your ears, you may not obtain the correct sound qualities or call performance. Change the earbud tips to ones that fit more snugly in your ear
+                  <br>- NEXT-LEVEL ACTIVE NOISE CANCELLATION – Up to 2x more Active Noise Cancellation than the previous AirPods Pro for dramatically less noise on your commute, or when you want to focus. Adaptive Transparency lets you comfortably hear the world around you, adjusting for intense noise—like sirens or construction—in real time.
+                  <br>- CUSTOMIZABLE FIT – Now with four pairs of silicone tips (XS, S, M, L) to fit a wider range of ears and provide all-day comfort. The tips create an acoustic seal to help keep out noise and secure AirPods Pro in place.
+                  <br>- SOUND ALL AROUND – Personalized Spatial Audio surrounds you in sound tuned just for you. It works with dynamic head tracking to immerse you deeper in music and movies.
+                  <br>- HIGHER LEVEL OF CONTROL – Now you can swipe the stem to adjust volume. Press it to play and pause music or to answer and end a call, or hold it to switch between Active Noise Cancellation and Adaptive Transparency.
+                  <br>- A LEAP IN BATTERY LIFE – Up to 6 hours of listening time with Active Noise Cancellation enabled — 33% more than AirPods Pro (1st generation). With the charging case, you can get 30 hours of total listening time with Active Noise Cancellation enabled — 6 hours longer than AirPods Pro (1st generation).
+                  <br>- A MORE CAPABLE CASE – Keep track of AirPods Pro with Precision Finding and a built-in speaker. A lanyard loop keeps your AirPods Pro close. Charge with an Apple Watch or MagSafe charger, or use the Lightning connector or a Qi-certified charger.
+                  <br>- MAGICAL EXPERIENCE – Quick access to Siri by saying “Hey Siri”. Easy setup, in-ear detection, and automatic switching between devices. Audio Sharing lets you share a song or a show between two sets of AirPods on your iPhone, iPad, iPod touch, or Apple TV.
                   `,
                   id: 0,
                   bestseller: false,
@@ -96,11 +96,11 @@ const items = [
                   category: "Electronics",
                   brand: "Amazon",
                   description: `
-                  Your favorite music and content – Play music, audiobooks, and podcasts from Amazon Music, Apple Music, Spotify and others or via Bluetooth throughout your home.
-                  Alexa is happy to help – Ask Alexa for weather updates and to set hands-free timers, get answers to your questions and even hear jokes. Need a few extra minutes in the morning? Just tap your Echo Dot to snooze your alarm.
-                  Keep your home comfortable – Control compatible smart home devices with your voice and routines triggered by built-in motion or indoor temperature sensors. Create routines to automatically turn on lights when you walk into a room, or start a fan if the inside temperature goes above your comfort zone.
-                  Designed to protect your privacy – Amazon is not in the business of selling your personal information to others. Built with multiple layers of privacy controls, including a mic off button.
-                  Do more with device pairing– Fill your home with music using compatible Echo devices in different rooms, create a home theatre system with Fire TV, or extend wifi coverage with a compatible eero network so you can say goodbye to drop-offs and buffering.
+                  <br>- Your favorite music and content – Play music, audiobooks, and podcasts from Amazon Music, Apple Music, Spotify and others or via Bluetooth throughout your home.
+                  <br>- Alexa is happy to help – Ask Alexa for weather updates and to set hands-free timers, get answers to your questions and even hear jokes. Need a few extra minutes in the morning? Just tap your Echo Dot to snooze your alarm.
+                  <br>- Keep your home comfortable – Control compatible smart home devices with your voice and routines triggered by built-in motion or indoor temperature sensors. Create routines to automatically turn on lights when you walk into a room, or start a fan if the inside temperature goes above your comfort zone.
+                  <br>- Designed to protect your privacy – Amazon is not in the business of selling your personal information to others. Built with multiple layers of privacy controls, including a mic off button.
+                  <br>- Do more with device pairing– Fill your home with music using compatible Echo devices in different rooms, create a home theatre system with Fire TV, or extend wifi coverage with a compatible eero network so you can say goodbye to drop-offs and buffering.
                   `,
                   id: 2,
                   bestseller: true,
@@ -394,10 +394,10 @@ const items = [
                   category: "Clothing & Accessories",
                   brand: "Carhartt",
                   description: `
-                  Carhartt label sewn on front
-                  Prev; Name: Acrylic Watch Hat
-                  Carhartt Company Gear Collection
-                  Carhartt label on front
+                  <br>- Carhartt label sewn on front
+                  <br>- Name: Acrylic Watch Hat
+                  <br>- Carhartt Company Gear Collection
+                  <br>- Carhartt label on front
                   `,
                   id: 16,
                   bestseller: true,
@@ -476,7 +476,19 @@ const cartItems = [
       {
             product: {
                   id: 0,
-                  color: ""
+                  color: "White"
             }
-      },       
+      },
+      {
+            product: {
+                  id: 2,
+                  color: "Blue"
+            }
+      },   
+      {
+            product: {
+                  id: 16,
+                  color: "Sandstone"
+            }
+      },   
 ];
