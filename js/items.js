@@ -471,3 +471,12 @@ const items = [
             }
       }
 ];
+
+const cartItems = [
+      {
+            product: {
+                  id: 0,
+                  color: ""
+            }
+      },       
+];

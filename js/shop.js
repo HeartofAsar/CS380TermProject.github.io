@@ -131,9 +131,18 @@ function displayItems() {
                 }
             }
 
+            let cardClass = "shop-card";
+            let buttonText = "Add to cart";
+            let stockText = "In stock: " + items[i].product.itemsLeft;
+            if (items[i].product.itemsLeft <= 0)
+            {
+                cardClass = "shop-card out-of-stock";
+                buttonText = "Out of stock";
+                stockText = "OUT OF STOCK";
+            }
             //add this product card to the output 
             output = output +
-                "<div class='shop-card'>" +
+                "<div class='" + cardClass + "'>" +
                     bestsellerText +
                     "<div class='card-img-box'>" +
                         "<img id='product-img-" + i + "' src='images/items/" + items[i].product.filename + "-" + items[i].product.colors[0] + ".jpg' class='item-img' alt='" + items[i].product.title + "'>" +
@@ -143,13 +152,13 @@ function displayItems() {
                         "<p class='card-price'>$" + items[i].product.price + "</p>" +
                         ratingText +
                         "<p class='card-info'>Brand: " + items[i].product.brand + "</p>" +
-                        "<p class='card-info'>In stock: " + items[i].product.itemsLeft + "</p>" +
+                        "<p class='card-info'>" + stockText + "</p>" +
                         "<p class='card-info'>Category: " + items[i].product.category + "</p>" +
                         "<div class='card-colors'>" +
                             "<p class='card-info'>Color:</p>" +
                             "<p class='card-info'>" + colorsText + "</p>" +
                         "</div>" +
-                        "<button class='card-button'>Add to cart</button>" +
+                        "<button class='card-button'>" + buttonText + "</button>" +
                     "</div>" +
                 "</div>";
         }
