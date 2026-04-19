@@ -1,0 +1,55 @@
+
+/* Page Header */
+.Shipping-Header{
+    background-color: #0d2600;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.Shipping-Header h1{
+    margin-bottom: 10px;
+}
+
+.Shipping-Header p{
+    width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.Shipping-Container{
+    margin-top: 40px;
+    justify-content: center;
+}
+
+
+/* Table Header */
+.Shipping-Table{
+    background-color: rgb(13, 38, 0);
+    color: white;
+}
+
+.Shipping-Table th{
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Table Body */
+.Shipping-Table td{
+    padding: 15px;
+    border-bottom: 1px solid #c1bfbf;
+    text-align: left;
+}
+
+/* Table Zebra Striping Style */
+.Shipping-Table tbody tr:nth-child(even){
+    background-color: #8d8b8b;
+}
+
+/* Table Hover Effect */
+.Shipping-Table tbody tr:hover{
+    background-color: #04AA6D;
+
+}
