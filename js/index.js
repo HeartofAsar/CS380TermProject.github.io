@@ -1,17 +1,25 @@
 /* Keeps track of which slide is currently showing */
 let slideIndex = 0;
-showSlides();
+window.addEventListener("load", function(){
 
-/* 
-   this function hides every carousel slide,
-   then shows one slide at a time in order
-*/
+    showSlides();
+});
+
+
+
+
+
 function showSlides()
 {
     let i;
-
     /* Get all elements that use the Carousel-slides class */
     let slides = document.getElementsByClassName("Carousel-slides");
+    
+    if(slides.length === 0)
+    {
+        setTimeout(showSlides, 100);
+        return;
+    }
 
     for(i = 0; i < slides.length; i++)
     {
@@ -29,5 +37,6 @@ function showSlides()
     /* Show the current slide */
     slides[slideIndex - 1].style.display = "block";
 
-    /* Change the slide again after 2 seconds */
+    /* Change the slide again after 3 seconds */
+    setTimeout(showSlides, 3000); 
 }
